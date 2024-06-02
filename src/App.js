@@ -11,6 +11,7 @@ import AddProduct from './AddProduct';
 import Transactions from './Transactions';
 import Reviews from './Reviews';
 import LeaveReview from './LeaveReview';
+import AdminPage from './AdminPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ function App() {
                       <Route path="/transactions" element={<Transactions />} /> 
                       <Route path="/reviews" element={<Reviews />} /> 
                       <Route path="/leaveReview" element={<LeaveReview />} />
+                      <Route path="/adminPage" element={<AdminPage />} />
                       <Route path="/" element={<Navigate replace to="/login" />} />
                   </Routes>
               </main>

@@ -29,6 +29,7 @@ const Profile = () => {
 
     return (
         <div className="profile-container">
+            <button className="profileButton" style={{ position: 'absolute', top: 20, left: 20 }} onClick={() => navigate('/mainPage')}>Back</button>
             <h1>Welcome to my profile!</h1>
             <div>
                 <h2>Personal Details</h2>

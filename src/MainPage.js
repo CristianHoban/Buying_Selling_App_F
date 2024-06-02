@@ -40,7 +40,7 @@ const MainPage = () => {
         borderRadius: '10px',
         padding: '20px',
         margin: '20px',
-        width: '100%', // Make product boxes take full width of the main container
+        width: '400px', // Make product boxes take full width of the main container
         boxSizing: 'border-box', // Include padding in the width calculation
         boxShadow: '0 2px 5px rgba(0,0,0,0.1)' // Soft shadow for better visibility
     };
@@ -122,7 +122,7 @@ const MainPage = () => {
                 {products.length > 0 ? products.map((product, index) => (
                     <div key={index} style={productBoxStyle}>
                         <p><b>Description</b>: {product.description}</p>
-                        <p><b>Price</b>: {product.price}</p>
+                        <p><b>Price</b>: {product.price} lei</p>
                         <p><b>Type</b>: {product.type}</p>
                         <p><b>Condition</b>: {product.condition}</p>
                         <p><b>Seller</b>: {product.user.email}</p>

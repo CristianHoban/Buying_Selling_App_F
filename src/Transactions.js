@@ -19,7 +19,8 @@ const Transactions = () => {
         marginBottom: '20px',
         backgroundColor: 'rgba(255, 255, 255, 0.9)', // Transparent white background
         borderRadius: '8px', // Optional: rounded corners
-        boxShadow: '0 4px 8px rgba(0,0,0,0.1)' // Soft shadow for depth
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Soft shadow for depth
+        width: "400px"
     };
 
     const mainContainerStyle = {
