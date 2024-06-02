@@ -1,0 +1,19 @@
+/* Reviews.css */
+.review-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.review-text {
+    font-size: 16px; /* Adjust size as necessary */
+    color: #333; /* Dark grey text for readability */
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #0056b3; /* Blue for emphasis */
+}

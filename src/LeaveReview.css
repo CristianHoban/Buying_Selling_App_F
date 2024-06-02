@@ -1,0 +1,42 @@
+.leave-review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opacity for better readability */
+    width: 100%; /* Adjust width as necessary */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leave-review-input, .leave-review-textarea {
+    width: 80%; /* Full width within the container */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.leave-review-textarea {
+    height: 100px; /* Larger height for text area */
+}
+
+.leave-review-button { /* Similar styling as profile buttons */
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Extra spacing for the button */
+    transition: background-color 0.3s;
+}
+
+.leave-review-button:hover {
+    background-color: #0056b3;
+}

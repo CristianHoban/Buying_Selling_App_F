@@ -13,12 +13,35 @@ const Transactions = () => {
             .catch(err => console.error('Error fetching transactions:', err));
     }, [user.email]);
 
+    const boxStyle = {
+        border: '1px solid rgba(0, 0, 0, 0.2)', // Lighter border for subtlety
+        padding: '20px',
+        marginBottom: '20px',
+        backgroundColor: 'rgba(255, 255, 255, 0.9)', // Transparent white background
+        borderRadius: '8px', // Optional: rounded corners
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)' // Soft shadow for depth
+    };
+
+    const mainContainerStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        overflow: 'auto',
+        maxHeight: 'calc(100vh - 150px)', // Ensure the container does not overlap with fixed headers
+        width: '100%', // Centralize and expand the main container
+        margin: '0 auto', // Center the container horizontally
+        paddingTop: '60px', // Space from top bar
+        scrollbarWidth: 'none', // Firefox
+    '::-webkit-scrollbar': {
+        display: 'none' // Chrome, Safari, Opera
+    }};
+
     return (
-        <div>
+        <div style={mainContainerStyle}>
             <h1>Your Transactions</h1>
             {transactions.length > 0 ? (
                 transactions.map((transaction, index) => (
-                    <div key={index} style={{ border: '1px solid black', padding: '10px', marginBottom: '10px', background: '#f0f0f0' }}>
+                    <div key={index} style={boxStyle}>
                         {transaction.email_b === user.email ? (
                             <>
                                 <h2>You bought</h2>

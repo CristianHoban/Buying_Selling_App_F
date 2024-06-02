@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    max-height: calc(100vh - 150px); /* Adjust the max height as per your page structure */
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px; /* Adjust padding top as needed */
+}
+
+.offer-container {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%; /* Adjust width as needed */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    }
+
+h1, h2 {
+    margin: 10px 0;
+    font-size: 2rem; /* Adjust the font size as needed */
+    text-align: center;
+}
+
+.offer-title, .offer-text, .offer-price, .offer-condition {
+    margin: 5px 0; /* Adjust margins for spacing */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.offerButton { /* Styling for offer page buttons similar to profile buttons */
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Spacing between buttons */
+    transition: background-color 0.3s;
+}
+
+.offerButton:hover {
+    background-color: #0056b3;
+}

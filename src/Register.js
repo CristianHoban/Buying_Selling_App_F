@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'; 
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -37,63 +38,49 @@ const Register = () => {
     };
 
     return (
-        <div>
+        <div className="login-container"> 
             <h1>Register</h1>
-            <div className="register-container">
-                <form onSubmit={handleRegister}>
-                    <div>
-                        <label>Last name:</label>
-                        <input
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>First name:</label>
-                        <input
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>Email:</label>
-                        <input
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>Address:</label>
-                        <input
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>Balance:</label>
-                        <input
-                            value={balance}
-                            onChange={(e) => setBalance(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit">Register</button>
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
-                </form>
-            </div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <form onSubmit={handleRegister}>
+                <label>Email:</label>
+                <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <label>Password:</label>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <label>First Name:</label>
+                <input
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                />
+                <label>Last Name:</label>
+                <input
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                />
+                <label>Address:</label>
+                <input
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    required
+                />
+                <label>Balance:</label>
+                <input
+                    value={balance}
+                    onChange={(e) => setBalance(e.target.value)}
+                    required
+                />
+                <button type="submit" className="loginButton">Register</button>
+            </form>
         </div>
     );
 };

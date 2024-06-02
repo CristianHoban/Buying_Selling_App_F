@@ -9,6 +9,8 @@ import UserContext from './UserContext';
 import Register from './Register';
 import AddProduct from './AddProduct';
 import Transactions from './Transactions';
+import Reviews from './Reviews';
+import LeaveReview from './LeaveReview';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,6 +27,8 @@ function App() {
                       <Route path="/userOffers" element={<UserOffers />} /> 
                       <Route path="/addProduct" element={<AddProduct />} />
                       <Route path="/transactions" element={<Transactions />} /> 
+                      <Route path="/reviews" element={<Reviews />} /> 
+                      <Route path="/leaveReview" element={<LeaveReview />} />
                       <Route path="/" element={<Navigate replace to="/login" />} />
                   </Routes>
               </main>
